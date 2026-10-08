@@ -755,16 +755,8 @@ function crearTarjetaProducto(producto) {
 
 
     tarjeta.innerHTML = `
-
-        <div class="producto-imagen">
-
-    <img
-        src="imagenes/${nombreImagen(producto.nombre)}"
-        alt="${producto.nombre}"
-        loading="lazy"
-        onerror="this.src='imagenes/sin-imagen.jpg'"
-    >
-
+<div class="producto-imagen">
+    🌸
 </div>
 
         <div class="producto-info">
