@@ -22,6 +22,22 @@ const presentacionesBase = [
     }
 ];
 
+// ============================================
+// GENERAR NOMBRE AUTOMÁTICO DE LA IMAGEN
+// ============================================
+
+function nombreImagen(nombre) {
+
+    return nombre
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/^-+|-+$/g, "")
+        + ".jpg";
+
+}
+
 
 // ============================================
 // PRODUCTOS
@@ -741,8 +757,15 @@ function crearTarjetaProducto(producto) {
     tarjeta.innerHTML = `
 
         <div class="producto-imagen">
-            🌸
-        </div>
+
+    <img
+        src="imagenes/${nombreImagen(producto.nombre)}"
+        alt="${producto.nombre}"
+        loading="lazy"
+        onerror="this.src='imagenes/sin-imagen.jpg'"
+    >
+
+</div>
 
         <div class="producto-info">
 
