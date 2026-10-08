@@ -1,3 +1,4 @@
+@@ -0,0 +1,1380 @@
 // ============================================
 // CATÁLOGO DE ESENCIAS
 // ============================================
@@ -21,22 +22,6 @@ const presentacionesBase = [
         precio: 40000
     }
 ];
-
-// ============================================
-// GENERAR NOMBRE AUTOMÁTICO DE LA IMAGEN
-// ============================================
-
-function nombreImagen(nombre) {
-
-    return nombre
-        .normalize("NFD")
-        .replace(/[\u0300-\u036f]/g, "")
-        .toLowerCase()
-        .replace(/[^a-z0-9]+/g, "-")
-        .replace(/^-+|-+$/g, "")
-        + ".jpg";
-
-}
 
 
 // ============================================
@@ -755,9 +740,10 @@ function crearTarjetaProducto(producto) {
 
 
     tarjeta.innerHTML = `
-<div class="producto-imagen">
-    🌸
-</div>
+
+        <div class="producto-imagen">
+            🌸
+        </div>
 
         <div class="producto-info">
 
