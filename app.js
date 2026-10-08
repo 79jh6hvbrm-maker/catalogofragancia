@@ -741,11 +741,11 @@ function crearTarjetaProducto(producto) {
 
     tarjeta.innerHTML = `
 
-           <div class="producto-imagen">
+            <div class="producto-imagen">
             🌸
-           </div>
+            </div>
 
-           <div class="producto-info">
+            <div class="producto-info">
 
             <h3>
                 ${producto.nombre}
